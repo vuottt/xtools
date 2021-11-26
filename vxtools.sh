@@ -134,8 +134,7 @@ function processArgs()
     done
 }
 
-
-fucntion generate_password()
+function generate_password()
 {
   cat /dev/urandom | tr -dc 'a-zA-Z0-9-_!@#$%^&*()_+{}|:<>?=' | fold -w 12 | head -n 1
 }
