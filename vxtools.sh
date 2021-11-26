@@ -139,3 +139,12 @@ fucntion generate_password()
 {
   cat /dev/urandom | tr -dc 'a-zA-Z0-9-_!@#$%^&*()_+{}|:<>?=' | fold -w 12 | head -n 1
 }
+
+function main() 
+{
+    [[ $# -lt 1 ]] && _printUsage
+    processArgs "$@"
+    exit 0
+}
+
+main "$@"
