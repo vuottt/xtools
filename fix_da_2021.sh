@@ -33,11 +33,7 @@ if [[ -f "$LIC_ETH_DEV_FILE" ]]; then
 	sed -i "s/255.255.255.192/255.255.255.128/g" $LIC_ETH_DEV_FILE
 fi
 
-echo "Ban tu kiem tra xoa neu co cron cu trong crontab -e nhe"
-echo "Ban tu kiem tra xoa neu co cron cu trong crontab -e nhe"
-echo "Ban tu kiem tra xoa neu co cron cu trong crontab -e nhe"
-echo "Ban tu kiem tra xoa neu co cron cu trong crontab -e nhe"
-echo "Ban tu kiem tra xoa neu co cron cu trong crontab -e nhe"
+sed -i "/update-license.sh/d" /var/spool/cron/root
 
 # Edit Config
 
