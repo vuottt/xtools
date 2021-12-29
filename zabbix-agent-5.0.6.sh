@@ -1,7 +1,8 @@
 #!/bin/bash
 #Script update Zabbix Agent to 5.6
-#IP Viettel or Quoc te su dung IP Zabbix Proxy 125.212.218.37
+#IP Viettel dung IP Zabbix Proxy 125.212.218.37
 #IP VNPT su dung Zabbix VDC 123.30.129.229
+#IP Nước ngoài 209.58.168.166
 IP=""
 if [[ $(curl -s ipinfo.io | grep "VNPT") ]];then
                 IP="123.30.129.229"
