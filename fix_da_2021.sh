@@ -69,6 +69,11 @@ cat <<EOF > /sbin/daifdown
 sleep 5
 /sbin/ip addr del 210.211.122.199/25  dev $LIC_ETH_DEV
 EOF
+#
+#Chan update và fix loi build bat update
+
+sed -i.fixDAbackup2328 '2328,2330 {s/^/#/}' /usr/local/directadmin/custombuild/build
+sed -i.fixDAbackup27964 '27964,27966 {s/^/#/}' /usr/local/directadmin/custombuild/build
 
 # Execute
 sleep 1
