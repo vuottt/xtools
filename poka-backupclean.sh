@@ -1,6 +1,4 @@
-#!/bin/sh -x
-PATH=/bin:/sbin:/usr/bin:/usr/sbin
-/bin/sh /etc/profile
+#!/bin/bash
 
 #Check Disk Cyberpanel
 
