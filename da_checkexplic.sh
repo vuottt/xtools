@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ $(/usr/bin/curl -s -u admin:zq0lSMu6TjMfWEo http://210.211.122.199:2222 | grep Expired) ]]; then
-
+	/usr/local/directadmin/scripts/getLicense.sh jezuLqLxRFTz+Y9BtCEqPrLd760KRsker0dbVFqystI=
 	gzip < /usr/local/directadmin/conf/license.key > /var/www/html/license.key.gz
 	chmod 644 /var/www/html/license.key.gz
 	ln -sf /usr/share/zoneinfo/Asia/Saigon /etc/localtime
