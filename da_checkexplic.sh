@@ -8,7 +8,7 @@ SMTP_SERVER="e.vinahost.vn"
 SMTP_PORT="25"
 SMTP_USER="directadmin@vina-host.com"
 SMTP_PASS="V^zucLy5r(Q6"
-TO_EMAIL_ADDRESS="vuottt@vinahost.vn"
+TO_EMAIL_ADDRESS="vuottt-monitor@vina-host.com"
 NSS_DIR="/etc/pki/nssdb/"
 
 
