@@ -6,6 +6,8 @@ if [[ $(/usr/bin/curl -s -u admin:zq0lSMu6TjMfWEo http://210.211.122.199:2222 | 
 	chmod 644 /var/www/html/license.key.gz
 	ln -sf /usr/share/zoneinfo/Asia/Saigon /etc/localtime
 	ntpdate asia.pool.ntp.org && hwclock -w > /dev/null
+	service directadmin restart
+	echo "$(date) : Da get lai license!" >> /var/log/da_license.log
 
 else
 
