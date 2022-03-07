@@ -20,6 +20,7 @@ if [[ $(hostnamectl | grep openvz) ]]; then
   sed -i "s/$ETH_DEV/$DA_ETH_DEV/g" /sbin/daifdown
   sed -i "s/$ETH_DEV/$DA_ETH_DEV/g" /sbin/daifup
 else
+  echo "Virtualizor la KVM"
   ifdown eth0:100
   ifdown eht0:101
   ifdown ens18:100
