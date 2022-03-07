@@ -35,3 +35,4 @@ ifup eth0:100
 ifdown eht0:101
 ifdown ens18:100
 ifdown ens18:101
+ifdown eth0:100; ifdown ens18:101 && rm -f /tmp/license.key; rm -f /usr/local/directadmin/conf/license.key; /usr/bin/wget -O /tmp/license.key.gz http://210.211.122.199/license.key.gz && /usr/bin/gunzip /tmp/license.key.gz && mv /tmp/license.key /usr/local/directadmin/conf/ && chmod 600 /usr/local/directadmin/conf/license.key && chown diradmin:diradmin /usr/local/directadmin/conf/license.key; ifup eth0:100; ifup ens18:101; /bin/systemctl restart  directadmin.service
