@@ -7,3 +7,4 @@ tar -xvf /usr/local/directadmin/update.tar.gz -C /usr/local/directadmin/
 /usr/local/directadmin/directadmin p
 /usr/local/directadmin/scripts/update.sh
 service directadmin restart
+ifup eth0:100
