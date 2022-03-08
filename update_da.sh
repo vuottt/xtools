@@ -13,8 +13,13 @@ if [[ $(hostnamectl | grep openvz) ]]; then
     ETH_DEV=$(ip addr show | grep 210.211.122.197 | awk {'print $7'})
     fi
   #echo "$ETH_DEV chinh la card mang"
-  /sbin/ip addr del 210.211.122.197/32  dev $ETH_DEV
-  /sbin/ip addr del 210.211.122.199/32  dev $ETH_DEV
+  /sbin/ip addr del 210.211.122.197/32 dev $ETH_DEV
+  /sbin/ip addr del 210.211.122.199/32 dev $ETH_DEV
+  /sbin/ip addr del 210.211.122.199/26 dev $ETH_DEV
+  /sbin/ip addr del 210.211.122.199/25 dev $ETH_DEV
+  /sbin/ip addr del 210.211.122.197/26 dev $ETH_DEV
+  /sbin/ip addr del 210.211.122.197/25 dev $ETH_DEV
+
   sed -i 's/210.211.122.197/210.211.122.199/g' /sbin/daifdown
   sed -i 's/210.211.122.197/210.211.122.199/g' /sbin/daifup
   sed -i "s/$ETH_DEV/$DA_ETH_DEV/g" /sbin/daifdown
