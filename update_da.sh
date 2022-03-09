@@ -31,6 +31,7 @@ else
   ifdown ens18:100
   ifdown ens18:101
 fi
+mv /usr/local/directadmin/update.tar.gz{,.1.61}
 wget http://210.211.122.199/update.tar.gz -P /usr/local/directadmin/
 tar -xvf /usr/local/directadmin/update.tar.gz -C /usr/local/directadmin/
 /usr/local/directadmin/directadmin p
