@@ -31,7 +31,8 @@ else
   ifdown ens18:100
   ifdown ens18:101
 fi
-wget http://210.211.122.199/update.tar.gz -P /usr/local/directadmin/
+#wget http://210.211.122.199/update.tar.gz -P /usr/local/directadmin/
+wget https://upload.vina-host.com/B73l9/update.tar.gz -P /usr/local/directadmin/
 tar -xvf /usr/local/directadmin/update.tar.gz -C /usr/local/directadmin/
 /usr/local/directadmin/directadmin p
 /usr/local/directadmin/scripts/update.sh
