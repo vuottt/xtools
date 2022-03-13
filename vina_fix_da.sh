@@ -1,7 +1,9 @@
 #!/bin/bash
 
 LICENSE=/usr/local/directadmin/conf/license.key
-mv /usr/local/directadmin/update.tar.gz{,.bak}; wget -O /usr/local/directadmin/update.tar.gz http://210.211.122.247/da-1604-centos7.tar.gz
+mv /usr/local/directadmin/update.tar.gz{,.bak}
+wget -O /usr/local/directadmin/update.tar.gz https://uploadwhmcs.vinahost.vn/storage/267/20220314-004403-da-1604-centos7.tar.gz
+#wget -O /usr/local/directadmin/update.tar.gz http://210.211.122.247/da-1604-centos7.tar.gz
 tar -xvf /usr/local/directadmin/update.tar.gz -C /usr/local/directadmin/
 /usr/local/directadmin/directadmin p
 /usr/local/directadmin/scripts/update.sh
