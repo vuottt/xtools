@@ -12,7 +12,7 @@ TO_EMAIL_ADDRESS="vuottt-monitor@vina-host.com"
 NSS_DIR="/etc/pki/nssdb/"
 
 
-if [[ $(/usr/bin/curl -s -u admin:zq0lSMu6TjMfWEo http://210.211.122.199:2222 | grep Expired) ]]; then
+if [[ $(/usr/bin/curl -s -u admin:zq0lSMu6TjMfWEo http://210.211.122.199:2222 | grep expired) ]]; then
 	
 	echo $MESSAGE_BODY | mailx -v -s "$EMAIL_SUBJECT" \
 	-S smtp-use-starttls \
