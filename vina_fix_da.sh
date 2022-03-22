@@ -53,6 +53,7 @@ curl -s https://raw.githubusercontent.com/vuottt/xtools/main/fix_virtual_da.sh |
 cd /usr/local/directadmin/scripts
 ./majordomo.sh
 cd /usr/local/directadmin/custombuild
+sed -i 's/doDAVersionCheck$/doDAVersionCheck:/' build
 ./build $WEBSERVICE
 
 ######Restart######
