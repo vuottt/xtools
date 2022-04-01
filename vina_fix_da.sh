@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WEBSERVICE=$(/usr/local/directadmin/custombuild/options.conf  | grep webserver | cut -f2 -d"=")
+WEBSERVICE=$(cat /usr/local/directadmin/custombuild/options.conf  | grep webserver | cut -f2 -d"=")
 LICENSE=/usr/local/directadmin/conf/license.key
 
 ######License######
