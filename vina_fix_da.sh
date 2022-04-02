@@ -1,7 +1,15 @@
 #!/bin/bash
 OSVERSION=$(rpm --eval '%{centos_ver}')
 if [[ $OSVERSION -eq 6 ]]; then
-  echo "Detect OS CentOS 6. Script khong chay tren CentOS6. Vui long chay lai cron cu trong /etc/cron.d/directadmin_cron"
+  echo "Detect OS CentOS 6. Script khong chay tren CentOS6. Vui long fix theo cac buoc sau:" 
+  echo "Tim card mang ao license co IP 123.30.136.208 va ifdown di, vd: ifdown eth0:101"
+  echo "rm -f /usr/local/directadmin/update.tar.gz; wget -O /usr/local/directadmin/update.tar.gz 123.30.136.208/update.tar.gz"
+  echo "cd /usr/local/directadmin/"
+  echo "tar -xvf update.tar.gz"
+  echo "./directadmin p"
+  echo "cd scripts"
+  echo "./update.sh"
+  echo "Chay lai cron cu trong /etc/cron.d/directadmin_cron"
   exit 1;
 fi
 WEBSERVICE=$(cat /usr/local/directadmin/custombuild/options.conf  | grep webserver | cut -f2 -d"=")
