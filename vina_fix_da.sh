@@ -1,6 +1,6 @@
 #!/bin/bash
 OSVERSION=$(rpm --eval '%{centos_ver}')
-if [[ $OSVERSION==6 ]]; then
+if [[ $OSVERSION -eq 6 ]]; then
   echo "Detect OS CentOS 6. Script khong chay tren CentOS6. Vui long chay lai cron cu trong /etc/cron.d/directadmin_cron"
   exit 1;
 fi
