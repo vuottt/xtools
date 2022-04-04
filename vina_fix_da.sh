@@ -68,6 +68,15 @@ cd /usr/local/directadmin/custombuild
 sed -i 's/doDAVersionCheck$/doDAVersionCheck:/' build
 ./build $WEBSERVICE
 
+######Fix Dovecot #######
+
+cd /usr/local/directadmin/custombuild
+./build update
+./build clean
+./build dovecot d
+wget -O /etc/dovecot/dovecot.conf "http://files.directadmin.com/services/custombuild/dovecot.conf.2.0"
+./build todovecot
+
 ######Restart######
 service directadmin restart
 sleep 5
