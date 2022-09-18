@@ -1,4 +1,4 @@
-# #!/bin/bash
+#!/bin/bash
 # OSVERSION=$(rpm --eval '%{centos_ver}')
 # if [[ $OSVERSION -eq 6 ]]; then
 #   mv /usr/local/directadmin/update.tar.gz{,.bak}
