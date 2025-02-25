@@ -2,17 +2,17 @@
 
 MESSAGE_BODY="DirectAdmin license hết hạn. Login vào server http://210.211.122.199:2222 kiểm tra ngay"
 EMAIL_SUBJECT="DirectAdmin license Expired."
-FROM_EMAIL_ADDRESS="directadmin@vina-host.com"
+FROM_EMAIL_ADDRESS=""
 FRIENDLY_NAME="DirectAdmin CentOS7 License"
-SMTP_SERVER="e.vinahost.vn"
+SMTP_SERVER=""
 SMTP_PORT="25"
-SMTP_USER="directadmin@vina-host.com"
-SMTP_PASS="V^zucLy5r(Q6"
-TO_EMAIL_ADDRESS="vuottt-monitor@vina-host.com"
+SMTP_USER=""
+SMTP_PASS=""
+TO_EMAIL_ADDRESS=""
 NSS_DIR="/etc/pki/nssdb/"
 
 
-if [[ $(/usr/bin/curl -s -u admin:zq0lSMu6TjMfWEo http://210.211.122.199:2222 | grep expired) ]]; then
+if [[ $(/usr/bin/curl -s -u admin:zq0fdgdgd6TjMfWEo http://210.222.222.222:2222 | grep expired) ]]; then
 	
 	echo $MESSAGE_BODY | mailx -v -s "$EMAIL_SUBJECT" \
 	-S smtp-use-starttls \
